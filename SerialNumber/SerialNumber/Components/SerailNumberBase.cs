@@ -61,8 +61,21 @@ namespace SerialNumber.Components
         {
             var inst = GetInst();
             var result = inst.SerialNumber;
-            inst.SerialNumber++;
+            inst.SerialNumber++;         
             return result;
+        }
+
+        public static void Incriment()
+        {
+            var inst = GetInst();
+            inst.SerialNumber++;
+        }
+
+        public static void Dicrement()
+        {
+            var inst = GetInst();
+            if(inst.SerialNumber > 1)
+            inst.SerialNumber--;
         }
     }
 }
